@@ -1,0 +1,18 @@
+<!doctype html>
+    <head>
+        <title>Tic-Tac-Toe-Squared</title>
+        <script>
+            window.addEventListener('load', f => {
+                let request = new XMLHttpRequest();
+                request.open('GET', '/wait', false);
+                request.send();
+                console.log(request.response);
+                window.location.replace('/play')
+            });
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align:center;">Looking for an opponent...</h1>
+        <h1 style="text-align:center;">{{uid}}</h1>
+    </body>
+</html>
