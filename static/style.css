@@ -1,0 +1,69 @@
+body {
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+section {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+#game-container {
+    position: relative;
+    left: 0%;
+    display: inline-grid;
+    grid-template-columns: repeat(3, auto);
+}
+.bigcell {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    font-family: "Permanent Marker";
+    width: 308px;
+    height: 308px;
+    box-shadow: 0 0 0 3px #000;
+    border: 3px solid #000;
+    cursor: pointer;
+    line-height: 308px;
+    font-size: 400px;
+}
+.bigcell[disabled] {
+    background-color: #aaa;
+}
+.bigcell[selected] {
+    background-color: #bfc;
+}
+.cell {
+    font-family: "Permanent Marker";
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 2px #000;
+    border: 2px solid #000;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 120px;
+}
+.X {
+    color: #d22;
+}
+.O {
+    color: #2ad;
+}
+.bigcelltext {
+    position: absolute;
+    left: 4%;
+}
+.bigcelltext.X {
+    color: #f00;
+}
+.bigcelltext.O {
+    color: #0cf;
+}
+#game-status {
+    top: 0px;
+    font-size: xxx-large;
+}
+#disconnect {
+    min-width: min(max-content, max(min-content, 10%));
+    min-height: min(max-content, max(min-content, 5%));
+    font-size: xx-large;
+}
